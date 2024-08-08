@@ -10,7 +10,7 @@
     	<%
     	 	String user_name = (String) request.getAttribute("name");
     	 	String user_email = (String) request.getAttribute("email");
-    	 	String user_adress = (String) request.getAttribute("adress");
+    	 	String user_address = (String) request.getAttribute("address");
     	 	String user_tell = (String) request.getAttribute("tell");
         %>
         
@@ -31,7 +31,7 @@
             </tr>
            	<tr>
                 <td>住所</td>
-                <td><%= user_adress %></td>
+                <td><%= user_address %></td>
             </tr>
             <tr>
                 <td>電話番号</td>

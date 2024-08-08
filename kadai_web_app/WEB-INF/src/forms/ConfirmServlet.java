@@ -18,15 +18,15 @@ public class ConfirmServlet extends HttpServlet {
         response.setContentType("text/html; charset=UTF-8");
 
         // JSPからのリクエストデータ取得
-        String name = request.getParameter("user_name");
-        String email = request.getParameter("user_email");
-        String adress = request.getParameter("user_adress");
-        String tell = request.getParameter("user_tell");
+        String name = request.getParameter("name");
+        String email = request.getParameter("email");
+        String address = request.getParameter("address");
+        String tell = request.getParameter("phone_number");
 
         // リクエストスコープにデータ保存
         request.setAttribute( "name", name );
         request.setAttribute( "email", email );
-        request.setAttribute( "adress", adress );
+        request.setAttribute( "address", address );
         request.setAttribute( "tell", tell );
 
         // フォワードによる画面遷移
