@@ -1,7 +1,6 @@
 package sj;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -36,9 +35,9 @@ public class LinkServlet extends HttpServlet {
 
         // レスポンスのコンテンツタイプ設定
         response.setContentType("text/html; charset=UTF-8");
-
-        // 取得したデータの表示
-        PrintWriter out = response.getWriter();
-        out.println("Servletからデータを受信しました:　" + userName + "さん、こんにちは！" );
+        
+        request.setAttribute( "productName", userName );
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/pages/kadai.jsp");
+        dispatcher.forward(request, response);
     }
 }
